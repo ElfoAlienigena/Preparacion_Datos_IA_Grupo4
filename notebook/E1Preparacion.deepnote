@@ -1,0 +1,818 @@
+environment: {}
+execution: {}
+metadata:
+  createdAt: 2026-04-15T00:22:48.900Z
+  modifiedAt: 2026-04-15T16:15:07.423Z
+project:
+  id: b5c827cc119640349ac4bca59a3cddf2
+  integrations:
+    - id: 9e1f6550-e5d6-49d2-a4b2-2ebc595b739d
+      name: Preparacion_Datos_IA_Grupo4
+      type: github_package
+  name: E1_Preparacion
+  notebooks:
+    - blocks:
+        - id: fcb1846c917c48ceb58a96d6d36b9799
+          blockGroup: 44cb3d30a1e84416a6f2329f59af074b
+          sortingKey: "000000"
+          type: markdown
+          content: >-
+            # Evaluación 1
+
+
+            **Integrante 1:** Cristina Morán
+
+
+            **Integrante 2:** Alonso Valderrama
+
+
+            **Integrante 3:** Amasis Guzmán
+
+
+            **Correo Electrónico integrante 1:** cristina.moran2201@alumnos.ubiobio.cl
+
+
+            **Correo Electrónico integrante 2:** alonso.valderrama2201@alumnos.ubiobio.cl
+
+
+            **Correo Electrónico integrante 3:** amasis.guzman2201@alumnos.ubiobio.cl
+
+
+            **Fecha de Creación:** Abril de 2026  
+
+            **Versión:** 1.0  
+
+
+            ---
+
+
+            ## Descripción
+
+
+            Este notebook contiene el desarrollo de la evaluación 1 de la asignatura Inteligencia Artificial de la
+            carrera de Ingeniería Civil en Informática de la Universidad del Bio Bio, sede Concepción.
+
+
+
+            ---
+
+
+            ## Requisitos de Software
+
+
+            Este notebook fue desarrollado con Python 3.12. A continuación se listan las bibliotecas necesarias:
+
+
+            - pandas (>=1.1.0)
+
+            - matplotlib (3.7.1)
+
+            - numpy (2.0.2)
+
+
+
+            Para verificar la versión instalada ejecutar usando el siguiente comando, usando la librería de la cual
+            quieres saber la versión:
+
+
+            ```python
+
+            import pandas as pd
+
+            print(pd.__version__)
+
+            ````
+          metadata:
+            id: 5TwX37lz3Gz0
+        - id: 91ea2bfc3e7449c390f1f789de1d4281
+          blockGroup: 6f2d78c6d4b241d4874adb724f45951e
+          sortingKey: "000001"
+          type: markdown
+          content: "#Carga de datos"
+          metadata:
+            id: F16pm-1_2ZrG
+        - id: 5ee0d3e3804044ca8b262c6bb1dc9395
+          blockGroup: 15874e0b6f054459be0d38ee4d883eb5
+          sortingKey: "000002"
+          contentHash: 2c408208
+          executionCount: 1
+          executionFinishedAt: 2026-04-15T16:13:36.860Z
+          executionStartedAt: 2026-04-15T16:13:32.131Z
+          type: code
+          content: "!wget https://raw.githubusercontent.com/JaznaLaProfe/datos/master/preparation_data/dataset_churn_dirty.csv"
+          metadata:
+            execution_start: 1776269612131
+            execution_millis: 4729
+            execution_context_id: 6daf44bb-22da-4994-93e6-38fe031089b8
+            id: qSsQp_d7WAzW
+            colab:
+              base_uri: https://localhost:8080/
+            outputId: 69c7d9be-dab2-43ed-df78-7802641d3aba
+        - id: 794f35cd2c4d4d8785f8ddfcc05b5cc7
+          blockGroup: eb90e89a64634b00be703ec81534cce3
+          sortingKey: "000003"
+          contentHash: 8ae1bf0f
+          executionCount: 2
+          executionFinishedAt: 2026-04-15T16:13:41.450Z
+          executionStartedAt: 2026-04-15T16:13:36.912Z
+          type: code
+          content: >-
+            import pandas as pd
+
+            import numpy as np
+
+
+            import matplotlib.pyplot as plt
+
+            import seaborn as sb
+
+
+            from sklearn.pipeline import Pipeline
+
+            from sklearn.base import BaseEstimator, TransformerMixin
+
+            from sklearn.impute import SimpleImputer
+
+            from sklearn.compose import ColumnTransformer
+
+            from sklearn.preprocessing import FunctionTransformer, StandardScaler, OneHotEncoder
+          metadata:
+            execution_start: 1776269616912
+            execution_millis: 4538
+            execution_context_id: 6daf44bb-22da-4994-93e6-38fe031089b8
+        - id: 552c3a4b68e5436f881afaf1ae676fd5
+          blockGroup: 0d0975be4a9647169c68835d61cc30d2
+          sortingKey: "000004"
+          contentHash: f731eb95
+          executionCount: 3
+          executionFinishedAt: 2026-04-15T16:13:43.382Z
+          executionStartedAt: 2026-04-15T16:13:41.500Z
+          type: code
+          content: >-
+            #Carga el set de datos
+
+            data = pd.read_csv('dataset_churn_dirty.csv')
+
+
+            #Para mostrar en una tabla los datos del archivo
+
+            data.head() 
+          metadata:
+            execution_start: 1776269621500
+            execution_millis: 1882
+            execution_context_id: 6daf44bb-22da-4994-93e6-38fe031089b8
+        - id: ad78385cfcd94c93963f3cca3654474a
+          blockGroup: 2f359cc381ab40aa9c4d8373ec32f707
+          sortingKey: "000005"
+          contentHash: f48eae52
+          executionCount: 4
+          executionFinishedAt: 2026-04-15T16:13:43.428Z
+          executionStartedAt: 2026-04-15T16:13:43.428Z
+          type: code
+          content: >-
+            # Cantidad de observaciones y columnas
+
+            data.shape
+          metadata:
+            execution_start: 1776269623428
+            execution_millis: 0
+            execution_context_id: 6daf44bb-22da-4994-93e6-38fe031089b8
+        - id: 847e96036bdb4aedaf4a3d1fb7217081
+          blockGroup: 334cd53e18504069b0e430fe28c90918
+          sortingKey: "000006"
+          type: text-cell-p
+          content: "Comentario: Esto quiere decir que los datos del archivo .csv ingresado poseen 16 columnas y cada una de ellas
+            21000 valores."
+          metadata:
+            formattedRanges:
+              - type: marks
+                marks:
+                  bold: true
+                toCodePoint: 11
+                fromCodePoint: 0
+        - id: 4eccaf9c0b3844b28119016568a0bd26
+          blockGroup: 2f42cede03d240629841decaeae79163
+          sortingKey: "000007"
+          type: markdown
+          content: "# Revisión de nulos"
+          metadata:
+            id: wEFMGwaQ2KEs
+        - id: 9dd4f071c14f4e9f8d8a2eae01c0f4f2
+          blockGroup: 7523b19da8244db6929ecc1c1a184d56
+          sortingKey: "000008"
+          contentHash: 4aefdb54
+          executionCount: 5
+          executionFinishedAt: 2026-04-15T16:13:43.476Z
+          executionStartedAt: 2026-04-15T16:13:43.476Z
+          type: code
+          content: >
+            # revisión de valores faltantes y tipos de datos
+
+            data.info()
+          metadata:
+            execution_start: 1776269623476
+            execution_millis: 0
+            execution_context_id: 6daf44bb-22da-4994-93e6-38fe031089b8
+            id: nzdTT0n218FG
+        - id: a3fba2cdd1f143b4bd69afc8263bd3b5
+          blockGroup: 506a5817bcc646e292ce472040382706
+          sortingKey: "000009"
+          type: text-cell-p
+          content: "De estos datos podemos observar la siguente cantidad de datos nulos:"
+          metadata:
+            formattedRanges: []
+        - id: e699343851404ef687a7987f1028c2ea
+          blockGroup: b84266b689bb4afa9c1a59041a14e577
+          sortingKey: "000010"
+          type: text-cell-p
+          content: "age : 1036 datos nulos."
+          metadata:
+            formattedRanges: []
+        - id: cb1fc1d0dbad4a40b4d4c8e106f50566
+          blockGroup: f9b4dba7d0bd4326a31ddd345ec91147
+          sortingKey: "000011"
+          type: text-cell-p
+          content: "monthly_income: 1038 datos nulos."
+          metadata:
+            formattedRanges: []
+        - id: 5df564f77730495685ee7d1972fc03dd
+          blockGroup: abf1ffd908ce41b6bded42ed24504001
+          sortingKey: "000012"
+          type: text-cell-p
+          content: "payment_method : 1047 datos nulos."
+          metadata:
+            formattedRanges: []
+        - id: f6fac88dd61e4e3ebd07d1dd446fd6da
+          blockGroup: 289e4252bc4047299b6b75114711a609
+          sortingKey: "000013"
+          type: text-cell-p
+          content: "Estos datos se mostraran en la siguente tabla con su % de nulos :"
+          metadata:
+            formattedRanges: []
+        - id: 26b0337341c445229f5288b4033a8047
+          blockGroup: e14458c396c0427c841193f6c8c56b5c
+          sortingKey: "000014"
+          type: text-cell-p
+          content: "gender: 1053 datos nulos."
+          metadata:
+            formattedRanges: []
+        - id: bcea5323f4da4a0a9fee3c703a196331
+          blockGroup: b590091612104cff8c5337bf892827d1
+          sortingKey: "000015"
+          type: text-cell-p
+          content: 'Comentario respecto a nulos: Se puede apreciar que las 4 columnas con nulos son "age", "monthly_income",
+            "gender" y "payment_method", además que la cantidad de datos total de cada columna debiera ser de 21000
+            entradas.'
+          metadata:
+            formattedRanges:
+              - type: marks
+                marks:
+                  bold: true
+                toCodePoint: 27
+                fromCodePoint: 0
+              - type: marks
+                marks:
+                  bold: true
+                toCodePoint: 84
+                fromCodePoint: 81
+              - type: marks
+                marks:
+                  bold: true
+                toCodePoint: 102
+                fromCodePoint: 88
+              - type: marks
+                marks:
+                  bold: true
+                toCodePoint: 112
+                fromCodePoint: 106
+              - type: marks
+                marks:
+                  bold: true
+                toCodePoint: 131
+                fromCodePoint: 117
+        - id: c5ee4511ca484ba3a7969b565eb56b6a
+          blockGroup: 1f2c9593c2244e41976531f833b66c4c
+          sortingKey: "000016"
+          contentHash: 6c2d6d66
+          executionCount: 6
+          executionFinishedAt: 2026-04-15T16:13:43.528Z
+          executionStartedAt: 2026-04-15T16:13:43.528Z
+          type: code
+          content: >-
+            columnas_con_nulos = data.isna().sum()[data.isna().sum() > 0]
+
+            porcentaje_nulos = (columnas_con_nulos / data.shape[0]) * 100
+
+
+            resultado = pd.DataFrame({
+                "Cantidad Nulos": columnas_con_nulos,
+                "Porcentaje Nulos (%)": porcentaje_nulos
+            }).round(2)
+
+
+            resultado
+          metadata:
+            execution_start: 1776269623528
+            execution_millis: 0
+            execution_context_id: 6daf44bb-22da-4994-93e6-38fe031089b8
+        - id: 1ccbab6423324659ac312a4d22ddfe7d
+          blockGroup: 1ceb40d4a5ae447486fdfe44e4e483e2
+          sortingKey: "000017"
+          type: text-cell-p
+          content: Observamos que entre estas 4 columnas tan solo el 5% o menos son nulos.
+          metadata:
+            formattedRanges: []
+        - id: 4617dad10590418197e62592348c777f
+          blockGroup: 7aab4cb0db4b4941b1b6260a14ae5d5f
+          sortingKey: "000018"
+          type: markdown
+          content: "# Revisión de atípicos"
+          metadata:
+            id: VHzOqYFZ2Ow8
+        - id: bd67b1849d7545f492b4739642d0aa72
+          blockGroup: 40ef8c52b9da4895a930e599e44ea583
+          sortingKey: "000019"
+          contentHash: c826aadd
+          executionCount: 7
+          executionFinishedAt: 2026-04-15T16:13:43.579Z
+          executionStartedAt: 2026-04-15T16:13:43.578Z
+          type: code
+          content: >
+            # Funciones para revisión de atípicos
+
+            def buscar_atipicos(data : pd.DataFrame, columna : str) -> pd.DataFrame:
+              """
+              Busca valores atípicos en una columna.
+              """
+              # Calcular los límites
+              Q1 = data[columna].quantile(0.25)
+              Q3 = data[columna].quantile(0.75)
+              # Calcula rango intercuartilico
+              IQR = Q3 - Q1
+              limite_inferior = Q1 - 1.5 * IQR 
+              limite_superior = Q3 + 1.5 * IQR
+
+              # Filtrar outliers
+              return data[(data[columna] < limite_inferior) | (data[columna] > limite_superior)]
+
+            def obtener_cantidad_atipicos(data : pd.DataFrame, columnas : np.array) -> dict:
+              """
+              Obtiene la cantidad de atípicos por cada columna.
+              """
+              total_atipicos = {}
+              for columna in data[columnas]:
+                atipicos = buscar_atipicos(data, columna)
+                total_atipicos[columna] = atipicos.shape[0]
+              return total_atipicos
+          metadata:
+            execution_start: 1776269623578
+            execution_millis: 1
+            execution_context_id: 6daf44bb-22da-4994-93e6-38fe031089b8
+            id: URiCgR8s2off
+        - id: 1529be3dd666421e998eac528d08ea4c
+          blockGroup: d0d17aaca5f141588f85570d7b4a1093
+          sortingKey: "000020"
+          contentHash: bbcea412
+          executionCount: 8
+          executionFinishedAt: 2026-04-15T16:13:43.628Z
+          executionStartedAt: 2026-04-15T16:13:43.628Z
+          type: code
+          content: >-
+            atipicos_por_columna = obtener_cantidad_atipicos(data, data.describe().columns)
+
+            atipicos_por_columna
+          metadata:
+            execution_start: 1776269623628
+            execution_millis: 0
+            execution_context_id: 6daf44bb-22da-4994-93e6-38fe031089b8
+        - id: 836ad098978c4a179a1fefcac417975b
+          blockGroup: 51e132fd635d4d6c9c7f42564f98dfbd
+          sortingKey: "000021"
+          type: text-cell-h1
+          content: Existencia de valores atípicos (outliers)
+          metadata:
+            formattedRanges: []
+        - id: eab366928de342b3888180e25af79f60
+          blockGroup: aa12790b3f4d442ab94b9b2c0b5b19f1
+          sortingKey: "000022"
+          type: text-cell-p
+          content: "Analizando los datos podemos identificar la presencia de valores atípicos en múltiples variables, siendo las
+            más relevantes: age, monthly_income, num_logins_last_month, avg_session_time, support_tickets,
+            account_balance y last_payment_amount.\r
+
+            \ "
+          metadata:
+            formattedRanges:
+              - type: marks
+                marks:
+                  bold: true
+                toCodePoint: 242
+                fromCodePoint: 125
+        - id: e880012662814afb947023419813d50c
+          blockGroup: ad754f5bc21541879b104a3dab829c4f
+          sortingKey: "000023"
+          contentHash: ae26f2dd
+          executionCount: 9
+          executionFinishedAt: 2026-04-15T16:13:44.359Z
+          executionStartedAt: 2026-04-15T16:13:43.672Z
+          type: code
+          content: >-
+            # Columnas numéricas para revisar atípicos
+
+            revision_atipicos = [
+                'age',
+                'monthly_income',
+                'tenure_months',
+                'num_logins_last_month',
+                'avg_session_time',
+                'support_tickets',
+                'account_balance',
+                'last_payment_amount'
+            ]
+
+
+            # Crear subplots (2 filas x 4 columnas porque son 8 variables)
+
+            fig, axes = plt.subplots(2, 4, figsize=(20,10))
+
+            axes = axes.flatten()
+
+
+            # Graficar boxplots
+
+            for i, col in enumerate(revision_atipicos):
+                data[col].plot(kind='box', ax=axes[i])
+                axes[i].set_title(col)
+                axes[i].tick_params(axis="x", labelrotation=45)
+
+            # Título general
+
+            plt.suptitle("Análisis de valores atípicos", fontsize=16, fontweight="bold")
+
+
+            # Ajuste de diseño
+
+            plt.tight_layout()
+
+
+            plt.show()
+          metadata:
+            execution_start: 1776269623672
+            execution_millis: 687
+            execution_context_id: 6daf44bb-22da-4994-93e6-38fe031089b8
+        - id: 61f93ea0956e483f8ef0aad197895c1f
+          blockGroup: 18f76f48f4c648698e807a0b11537a07
+          sortingKey: "000024"
+          type: text-cell-h1
+          content: Revisión de inconsistencias
+          metadata:
+            formattedRanges: []
+        - id: 0224cd84c6a94dc082a048cdc2b7648a
+          blockGroup: 33a43935732241808707ade504a2533a
+          sortingKey: "000025"
+          contentHash: 9154e2ac
+          executionCount: 10
+          executionFinishedAt: 2026-04-15T16:13:44.410Z
+          executionStartedAt: 2026-04-15T16:13:44.408Z
+          type: code
+          content: >-
+            # Detectar inconsistencias
+
+            inconsistentes = data[
+                (data["age"] <= 0) |
+                (data["monthly_income"] < 0) |
+                (data["tenure_months"] < 0) |
+                (data["num_logins_last_month"] < 0) |
+                (data["avg_session_time"] < 0) |
+                (data["support_tickets"] < 0) |
+                (data["account_balance"] < 0) |
+                (data["last_payment_amount"] < 0)
+            ]
+
+
+            print("Registros inconsistentes encontrados:")
+
+            inconsistentes
+          metadata:
+            execution_start: 1776269624408
+            execution_millis: 2
+            execution_context_id: 6daf44bb-22da-4994-93e6-38fe031089b8
+            deepnote_table_state:
+              sortBy: []
+              filters: []
+              pageSize: 10
+              pageIndex: 0
+              columnOrder:
+                - customer_id
+                - age
+                - monthly_income
+                - tenure_months
+                - num_logins_last_month
+                - avg_session_time
+                - support_tickets
+                - account_balance
+                - last_payment_amount
+                - gender
+                - subscription_type
+                - region
+                - payment_method
+                - is_active
+                - preferred_device
+                - churn
+              hiddenColumnIds: []
+              columnDisplayNames: []
+              conditionalFilters: []
+              cellFormattingRules: []
+              wrappedTextColumnIds: []
+            deepnote_table_invalid: false
+            deepnote_table_loading: false
+        - id: 0a3c7f42cece4c4aabe41cffb9c20c74
+          blockGroup: 638e0120de8045919e7c670daabf2512
+          sortingKey: "000026"
+          type: text-cell-p
+          content: "Comentario: Tabla de inconsistencias totales"
+          metadata:
+            formattedRanges:
+              - type: marks
+                marks:
+                  bold: true
+                toCodePoint: 11
+                fromCodePoint: 0
+        - id: b8b42494cbd045bca2984a1e92d1609e
+          blockGroup: 5c6120f1a63048778aa1f7e64e86a2fc
+          sortingKey: "000027"
+          type: text-cell-h1
+          content: Revisión de inconsistencias para cualitativas
+          metadata:
+            formattedRanges: []
+        - id: 1ff188822f724229bda240d19949873f
+          blockGroup: ccb9a21eef14400688f733734d0c8ae1
+          sortingKey: "000028"
+          type: text-cell-p
+          content: Genero
+          metadata:
+            formattedRanges:
+              - type: marks
+                marks:
+                  underline: true
+                toCodePoint: 6
+                fromCodePoint: 0
+        - id: 9a4c48fd70ad4731be7c2978bfd5251b
+          blockGroup: 9dea2ef145ac41088a1320849e1ee120
+          sortingKey: "000029"
+          contentHash: 96c2eeac
+          executionCount: 11
+          executionFinishedAt: 2026-04-15T16:13:44.456Z
+          executionStartedAt: 2026-04-15T16:13:44.456Z
+          type: code
+          content: data.gender.unique()
+          metadata:
+            execution_start: 1776269624456
+            execution_millis: 0
+            execution_context_id: 6daf44bb-22da-4994-93e6-38fe031089b8
+        - id: 095f98c843a84045b7362f820449c033
+          blockGroup: 601a7532983b426b8dfcf7bab220a413
+          sortingKey: "000030"
+          contentHash: 1d76f57b
+          executionCount: 12
+          executionFinishedAt: 2026-04-15T16:13:44.504Z
+          executionStartedAt: 2026-04-15T16:13:44.504Z
+          type: code
+          content: data.subscription_type.unique()
+          metadata:
+            execution_start: 1776269624504
+            execution_millis: 0
+            execution_context_id: 6daf44bb-22da-4994-93e6-38fe031089b8
+        - id: 993025135f1c477b9aebc9c52e06e4fc
+          blockGroup: 19f519d3f93f476c8491f2b806bb86ee
+          sortingKey: "000031"
+          type: text-cell-p
+          content: Region
+          metadata:
+            formattedRanges:
+              - type: marks
+                marks:
+                  underline: true
+                toCodePoint: 6
+                fromCodePoint: 0
+        - id: a108efff365c4cbc9d3e8593877fef63
+          blockGroup: ca6fb46f8e4d42a8b8b800fa25236f1e
+          sortingKey: "000032"
+          contentHash: dd888b6f
+          executionCount: 13
+          executionFinishedAt: 2026-04-15T16:13:44.552Z
+          executionStartedAt: 2026-04-15T16:13:44.552Z
+          type: code
+          content: data.region.unique()
+          metadata:
+            execution_start: 1776269624552
+            execution_millis: 0
+            execution_context_id: 6daf44bb-22da-4994-93e6-38fe031089b8
+        - id: de4972480d6f47b6945515a678dab1cf
+          blockGroup: f7b4263fdac4442791cef3e1512e1621
+          sortingKey: "000033"
+          type: text-cell-p
+          content: Metodo de Pago
+          metadata:
+            formattedRanges:
+              - type: marks
+                marks:
+                  underline: true
+                toCodePoint: 14
+                fromCodePoint: 0
+        - id: 6e4759e2fc944255ab8d71ecf41cb680
+          blockGroup: a26847446cf84dc0b643e755777d48af
+          sortingKey: "000034"
+          type: text-cell-p
+          content: Tipo de Subscripcion
+          metadata:
+            formattedRanges:
+              - type: marks
+                marks:
+                  underline: true
+                toCodePoint: 20
+                fromCodePoint: 0
+        - id: cfcd1b63a42a42bc88df2d4d0e067f0d
+          blockGroup: f9816f22702b46f99988d175ffa588c9
+          sortingKey: "000035"
+          contentHash: 808e122d
+          executionCount: 14
+          executionFinishedAt: 2026-04-15T16:13:44.600Z
+          executionStartedAt: 2026-04-15T16:13:44.600Z
+          type: code
+          content: data.payment_method.unique()
+          metadata:
+            execution_start: 1776269624600
+            execution_millis: 0
+            execution_context_id: 6daf44bb-22da-4994-93e6-38fe031089b8
+        - id: 710e8a76f59b45d1b3e95c4bba3a4250
+          blockGroup: 858cf82144a64139861742341b4e54d5
+          sortingKey: "000036"
+          type: text-cell-p
+          content: Es activo
+          metadata:
+            formattedRanges:
+              - type: marks
+                marks:
+                  underline: true
+                toCodePoint: 9
+                fromCodePoint: 0
+        - id: 3d5715ab92c34b9a816b340719930d40
+          blockGroup: 99bcb20a2d6c4f91abfbfdf70ac26cfd
+          sortingKey: "000037"
+          type: text-cell-p
+          content: Dispositivo favorito
+          metadata:
+            formattedRanges:
+              - type: marks
+                marks:
+                  underline: true
+                toCodePoint: 20
+                fromCodePoint: 0
+        - id: cb47130888084d36a69494c064f3291a
+          blockGroup: 5981ea8358f7499abc219eab63178bde
+          sortingKey: "000038"
+          contentHash: 184ceeda
+          executionCount: 16
+          executionFinishedAt: 2026-04-15T16:13:44.696Z
+          executionStartedAt: 2026-04-15T16:13:44.696Z
+          type: code
+          content: data.preferred_device.unique()
+          metadata:
+            execution_start: 1776269624696
+            execution_millis: 0
+            execution_context_id: 6daf44bb-22da-4994-93e6-38fe031089b8
+        - id: fbe1587ec16345c1aae27b62a8d43232
+          blockGroup: 11c27cdc6d6e413386daf02716457e76
+          sortingKey: "000039"
+          type: text-cell-h1
+          content: Revisión de duplicados
+          metadata:
+            formattedRanges: []
+        - id: 9fab83fe28bc4ce8bef4ad3fc27a4cdb
+          blockGroup: 39125776d72d48d8a9b80a98d57821a8
+          sortingKey: "000040"
+          contentHash: cb40baab
+          executionCount: 17
+          executionFinishedAt: 2026-04-15T16:13:44.744Z
+          executionStartedAt: 2026-04-15T16:13:44.744Z
+          type: code
+          content: >-
+            # Revisa la existencia de duplicados
+
+            data.duplicated().sum()
+          metadata:
+            execution_start: 1776269624744
+            execution_millis: 0
+            execution_context_id: 6daf44bb-22da-4994-93e6-38fe031089b8
+        - id: b8f6abf071dc41c4b81b272eca003170
+          blockGroup: 969cf8e8e42346c59b15eb390f8c9982
+          sortingKey: "000041"
+          contentHash: 5f2d0c33
+          executionCount: 18
+          executionFinishedAt: 2026-04-15T16:13:44.863Z
+          executionStartedAt: 2026-04-15T16:13:44.792Z
+          type: code
+          content: >-
+            # Obtiene los registos duplicados
+
+            data[data.duplicated(keep=False)].sort_values(by='customer_id')
+          metadata:
+            execution_start: 1776269624792
+            execution_millis: 71
+            execution_context_id: 6daf44bb-22da-4994-93e6-38fe031089b8
+            deepnote_table_state:
+              sortBy: []
+              filters: []
+              pageSize: 50
+              pageIndex: 0
+              columnOrder:
+                - customer_id
+                - age
+                - monthly_income
+                - tenure_months
+                - num_logins_last_month
+                - avg_session_time
+                - support_tickets
+                - account_balance
+                - last_payment_amount
+                - gender
+                - subscription_type
+                - region
+                - payment_method
+                - is_active
+                - preferred_device
+                - churn
+              hiddenColumnIds: []
+              columnDisplayNames: []
+              conditionalFilters: []
+              cellFormattingRules: []
+              wrappedTextColumnIds: []
+            deepnote_table_loading: false
+        - id: d02ae9c2a9134a02a593bf05ce1f9d70
+          blockGroup: eeff2ed552ed49bfb5f7b7b3771b6100
+          sortingKey: "000042"
+          type: markdown
+          content: "# Limpieza y transformación"
+          metadata:
+            id: -kcYdKIZ2cjt
+        - id: 6df5064e30084479a9902cea8a816563
+          blockGroup: 9e7f50ec5d8f4be3bb3ad8b9f0f0e276
+          sortingKey: "000043"
+          contentHash: c4953b7a
+          executionCount: 19
+          executionFinishedAt: 2026-04-15T16:13:44.908Z
+          executionStartedAt: 2026-04-15T16:13:44.908Z
+          type: code
+          content: "# Escriba su código acá"
+          metadata:
+            execution_start: 1776269624908
+            execution_millis: 0
+            execution_context_id: 6daf44bb-22da-4994-93e6-38fe031089b8
+            id: uXG_58zF2qJO
+        - id: c79775b3566c48069acd1df125ddf70e
+          blockGroup: 58e97985e29543fca9e6d6497e9b55ca
+          sortingKey: "000044"
+          contentHash: cb46ca4b
+          executionCount: 15
+          executionFinishedAt: 2026-04-15T16:13:44.648Z
+          executionStartedAt: 2026-04-15T16:13:44.648Z
+          type: code
+          content: data.is_active.unique()
+          metadata:
+            execution_start: 1776269624648
+            execution_millis: 0
+            execution_context_id: 6daf44bb-22da-4994-93e6-38fe031089b8
+        - id: 3e22bbe71d1845db84173f461159cfc0
+          blockGroup: e38a1db7-4a33-4e4b-864e-7279a664c151
+          sortingKey: "000045"
+          type: markdown
+          content: "# Guarda set de datos limpio y transformado"
+          metadata:
+            id: s8kSV8gI2gJ6
+        - id: 41144495e9654d56ab2e1fe7043248ff
+          blockGroup: da16154d-c3fc-4aa7-9130-567221e8452c
+          sortingKey: "000046"
+          contentHash: c4953b7a
+          executionCount: 20
+          executionFinishedAt: 2026-04-15T16:13:44.956Z
+          executionStartedAt: 2026-04-15T16:13:44.956Z
+          type: code
+          content: "# Escriba su código acá"
+          metadata:
+            execution_start: 1776269624956
+            execution_millis: 0
+            execution_context_id: 6daf44bb-22da-4994-93e6-38fe031089b8
+            id: tfx_0VvE3AG7
+      executionMode: block
+      id: 908bc9b2ec8a4dffbfd5c458a4d3807e
+      isModule: false
+      name: 620454_2026_Base_E1_Preparacion(1)
+      workingDirectory: /
+    - blocks: []
+      executionMode: block
+      id: 272058eb43054f9ca74c476f6bafa987
+      isModule: false
+      name: Notebook 1
+      workingDirectory: Preparacion_Datos_IA_Grupo4
+version: 1.0.0
