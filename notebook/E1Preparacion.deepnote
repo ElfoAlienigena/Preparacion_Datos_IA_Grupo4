@@ -2,7 +2,7 @@ environment: {}
 execution: {}
 metadata:
   createdAt: 2026-04-15T00:22:48.900Z
-  modifiedAt: 2026-04-16T12:45:00.614Z
+  modifiedAt: 2026-04-17T03:58:44.183Z
 project:
   id: b5c827cc119640349ac4bca59a3cddf2
   integrations:
@@ -95,14 +95,14 @@ project:
           blockGroup: 15874e0b6f054459be0d38ee4d883eb5
           sortingKey: "000002"
           contentHash: 2c408208
-          executionFinishedAt: 2026-04-16T12:33:40.188Z
-          executionStartedAt: 2026-04-16T12:33:35.640Z
+          executionFinishedAt: 2026-04-17T03:41:24.047Z
+          executionStartedAt: 2026-04-17T03:41:18.217Z
           type: code
           content: "!wget https://raw.githubusercontent.com/JaznaLaProfe/datos/master/preparation_data/dataset_churn_dirty.csv"
           metadata:
-            execution_start: 1776342815640
-            execution_millis: 4548
-            execution_context_id: d71a48bd-b011-4f28-9478-c99688d3da06
+            execution_start: 1776397278217
+            execution_millis: 5830
+            execution_context_id: dae28572-cade-4e9e-978f-5956d70dcdf7
             id: qSsQp_d7WAzW
             colab:
               base_uri: https://localhost:8080/
@@ -111,8 +111,8 @@ project:
           blockGroup: eb90e89a64634b00be703ec81534cce3
           sortingKey: "000003"
           contentHash: 8ae1bf0f
-          executionFinishedAt: 2026-04-16T12:33:44.758Z
-          executionStartedAt: 2026-04-16T12:33:40.237Z
+          executionFinishedAt: 2026-04-17T03:41:28.486Z
+          executionStartedAt: 2026-04-17T03:41:24.092Z
           type: code
           content: >-
             import pandas as pd
@@ -135,15 +135,15 @@ project:
 
             from sklearn.preprocessing import FunctionTransformer, StandardScaler, OneHotEncoder
           metadata:
-            execution_start: 1776342820237
-            execution_millis: 4521
-            execution_context_id: d71a48bd-b011-4f28-9478-c99688d3da06
+            execution_start: 1776397284092
+            execution_millis: 4394
+            execution_context_id: dae28572-cade-4e9e-978f-5956d70dcdf7
         - id: 552c3a4b68e5436f881afaf1ae676fd5
           blockGroup: 0d0975be4a9647169c68835d61cc30d2
           sortingKey: "000004"
           contentHash: f731eb95
-          executionFinishedAt: 2026-04-16T12:33:46.670Z
-          executionStartedAt: 2026-04-16T12:33:44.805Z
+          executionFinishedAt: 2026-04-17T03:41:29.284Z
+          executionStartedAt: 2026-04-17T03:41:28.532Z
           type: code
           content: >-
             #Carga el set de datos
@@ -155,50 +155,48 @@ project:
 
             data.head() 
           metadata:
-            execution_start: 1776342824805
-            execution_millis: 1865
-            execution_context_id: d71a48bd-b011-4f28-9478-c99688d3da06
+            execution_start: 1776397288532
+            execution_millis: 752
+            execution_context_id: dae28572-cade-4e9e-978f-5956d70dcdf7
         - id: ad78385cfcd94c93963f3cca3654474a
           blockGroup: 2f359cc381ab40aa9c4d8373ec32f707
           sortingKey: "000005"
           contentHash: f48eae52
-          executionFinishedAt: 2026-04-16T12:33:46.714Z
-          executionStartedAt: 2026-04-16T12:33:46.713Z
+          executionFinishedAt: 2026-04-17T03:41:29.328Z
+          executionStartedAt: 2026-04-17T03:41:29.328Z
           type: code
           content: >-
             # Cantidad de observaciones y columnas
 
             data.shape
           metadata:
-            execution_start: 1776342826713
-            execution_millis: 1
-            execution_context_id: d71a48bd-b011-4f28-9478-c99688d3da06
-        - id: 4eccaf9c0b3844b28119016568a0bd26
-          blockGroup: 2f42cede03d240629841decaeae79163
-          sortingKey: "000006"
-          type: markdown
-          content: "# Revisión de nulos"
-          metadata:
-            id: wEFMGwaQ2KEs
+            execution_start: 1776397289328
+            execution_millis: 0
+            execution_context_id: dae28572-cade-4e9e-978f-5956d70dcdf7
         - id: 9dd4f071c14f4e9f8d8a2eae01c0f4f2
           blockGroup: 7523b19da8244db6929ecc1c1a184d56
-          sortingKey: "000007"
-          contentHash: 4aefdb54
-          executionFinishedAt: 2026-04-16T12:33:46.758Z
-          executionStartedAt: 2026-04-16T12:33:46.757Z
+          sortingKey: "000006"
+          contentHash: 2a53443a
+          executionFinishedAt: 2026-04-17T03:41:29.376Z
+          executionStartedAt: 2026-04-17T03:41:29.376Z
           type: code
-          content: >
+          content: >-
             # revisión de valores faltantes y tipos de datos
 
             data.info()
+
+
+            # muestra la cantidad de nulos por columna
+
+            data.isnull().sum()
           metadata:
-            execution_start: 1776342826757
-            execution_millis: 1
-            execution_context_id: d71a48bd-b011-4f28-9478-c99688d3da06
+            execution_start: 1776397289376
+            execution_millis: 0
+            execution_context_id: dae28572-cade-4e9e-978f-5956d70dcdf7
             id: nzdTT0n218FG
         - id: 847e96036bdb4aedaf4a3d1fb7217081
           blockGroup: 334cd53e18504069b0e430fe28c90918
-          sortingKey: "000008"
+          sortingKey: "000007"
           type: text-cell-p
           content: "Comentario: Esto quiere decir que los datos del archivo .csv ingresado poseen 16 columnas y cada una de ellas
             21000 valores."
@@ -209,6 +207,13 @@ project:
                   bold: true
                 toCodePoint: 11
                 fromCodePoint: 0
+        - id: 4eccaf9c0b3844b28119016568a0bd26
+          blockGroup: 2f42cede03d240629841decaeae79163
+          sortingKey: "000008"
+          type: markdown
+          content: "# Revisión de nulos"
+          metadata:
+            id: wEFMGwaQ2KEs
         - id: a3fba2cdd1f143b4bd69afc8263bd3b5
           blockGroup: 506a5817bcc646e292ce472040382706
           sortingKey: "000009"
@@ -230,30 +235,16 @@ project:
           content: "monthly_income: 1038 datos nulos."
           metadata:
             formattedRanges: []
-        - id: f6fac88dd61e4e3ebd07d1dd446fd6da
-          blockGroup: 289e4252bc4047299b6b75114711a609
+        - id: 5df564f77730495685ee7d1972fc03dd
+          blockGroup: abf1ffd908ce41b6bded42ed24504001
           sortingKey: "000012"
-          type: text-cell-p
-          content: "Estos datos se mostraran en la siguiente tabla con su % de nulos :"
-          metadata:
-            formattedRanges: []
-        - id: 26b0337341c445229f5288b4033a8047
-          blockGroup: e14458c396c0427c841193f6c8c56b5c
-          sortingKey: "000013"
           type: text-cell-p
           content: "gender: 1053 datos nulos."
           metadata:
             formattedRanges: []
-        - id: 5df564f77730495685ee7d1972fc03dd
-          blockGroup: abf1ffd908ce41b6bded42ed24504001
-          sortingKey: "000014"
-          type: text-cell-p
-          content: "payment_method : 1047 datos nulos."
-          metadata:
-            formattedRanges: []
         - id: bcea5323f4da4a0a9fee3c703a196331
           blockGroup: b590091612104cff8c5337bf892827d1
-          sortingKey: "000015"
+          sortingKey: "000013"
           type: text-cell-p
           content: 'Comentario respecto a nulos: Se puede apreciar que las 4 columnas con nulos son "age", "monthly_income",
             "gender" y "payment_method", además que la cantidad de datos total de cada columna debiera ser de 21000
@@ -285,12 +276,19 @@ project:
                   bold: true
                 toCodePoint: 131
                 fromCodePoint: 117
+        - id: abe34e8dc779453ea99e98c2913b4672
+          blockGroup: bc0f9dc4a32b48229c0668d790f51231
+          sortingKey: "000014"
+          type: text-cell-p
+          content: "payment_method : 1047 datos nulos."
+          metadata:
+            formattedRanges: []
         - id: c5ee4511ca484ba3a7969b565eb56b6a
           blockGroup: 1f2c9593c2244e41976531f833b66c4c
-          sortingKey: "000016"
+          sortingKey: "000015"
           contentHash: 6c2d6d66
-          executionFinishedAt: 2026-04-16T12:33:46.810Z
-          executionStartedAt: 2026-04-16T12:33:46.809Z
+          executionFinishedAt: 2026-04-17T03:41:29.428Z
+          executionStartedAt: 2026-04-17T03:41:29.428Z
           type: code
           content: >-
             columnas_con_nulos = data.isna().sum()[data.isna().sum() > 0]
@@ -306,22 +304,22 @@ project:
 
             resultado
           metadata:
-            execution_start: 1776342826809
-            execution_millis: 1
-            execution_context_id: d71a48bd-b011-4f28-9478-c99688d3da06
+            execution_start: 1776397289428
+            execution_millis: 0
+            execution_context_id: dae28572-cade-4e9e-978f-5956d70dcdf7
         - id: 1ccbab6423324659ac312a4d22ddfe7d
           blockGroup: 1ceb40d4a5ae447486fdfe44e4e483e2
-          sortingKey: "000017"
+          sortingKey: "000016"
           type: text-cell-p
-          content: Observamos que entre estas 4 columnas tan solo el 5% o menos son nulos.
+          content: Observamos que entre estas 4 columnas tan solo el 5% de los datos o menos son nulos.
           metadata:
             formattedRanges: []
         - id: bd67b1849d7545f492b4739642d0aa72
           blockGroup: 40ef8c52b9da4895a930e599e44ea583
-          sortingKey: "000018"
+          sortingKey: "000017"
           contentHash: c826aadd
-          executionFinishedAt: 2026-04-16T12:33:46.857Z
-          executionStartedAt: 2026-04-16T12:33:46.857Z
+          executionFinishedAt: 2026-04-17T03:41:29.480Z
+          executionStartedAt: 2026-04-17T03:41:29.480Z
           type: code
           content: >
             # Funciones para revisión de atípicos
@@ -351,32 +349,55 @@ project:
                 total_atipicos[columna] = atipicos.shape[0]
               return total_atipicos
           metadata:
-            execution_start: 1776342826857
+            execution_start: 1776397289480
             execution_millis: 0
-            execution_context_id: d71a48bd-b011-4f28-9478-c99688d3da06
+            execution_context_id: dae28572-cade-4e9e-978f-5956d70dcdf7
             id: URiCgR8s2off
+        - id: 4d9eed28755b493bbaa14063829de0db
+          blockGroup: 84ca6446e4774d9c94db24bb7d734a50
+          sortingKey: "000018"
+          type: text-cell-p
+          content: De esto podemos decir que las columnas "monthly_income", "num_logins_last_month" y "avg_session_time" presentan
+            una alta cantidad de valores atípicos.
+          metadata:
+            formattedRanges:
+              - type: marks
+                marks:
+                  bold: true
+                toCodePoint: 55
+                fromCodePoint: 40
+              - type: marks
+                marks:
+                  bold: true
+                toCodePoint: 80
+                fromCodePoint: 58
+              - type: marks
+                marks:
+                  bold: true
+                toCodePoint: 102
+                fromCodePoint: 84
+        - id: 4617dad10590418197e62592348c777f
+          blockGroup: 7aab4cb0db4b4941b1b6260a14ae5d5f
+          sortingKey: "000019"
+          type: markdown
+          content: "# Revisión de atípicos"
+          metadata:
+            id: VHzOqYFZ2Ow8
         - id: 1529be3dd666421e998eac528d08ea4c
           blockGroup: d0d17aaca5f141588f85570d7b4a1093
-          sortingKey: "000019"
+          sortingKey: "000020"
           contentHash: bbcea412
-          executionFinishedAt: 2026-04-16T12:33:46.910Z
-          executionStartedAt: 2026-04-16T12:33:46.909Z
+          executionFinishedAt: 2026-04-17T03:41:29.524Z
+          executionStartedAt: 2026-04-17T03:41:29.524Z
           type: code
           content: >-
             atipicos_por_columna = obtener_cantidad_atipicos(data, data.describe().columns)
 
             atipicos_por_columna
           metadata:
-            execution_start: 1776342826909
-            execution_millis: 1
-            execution_context_id: d71a48bd-b011-4f28-9478-c99688d3da06
-        - id: 4617dad10590418197e62592348c777f
-          blockGroup: 7aab4cb0db4b4941b1b6260a14ae5d5f
-          sortingKey: "000020"
-          type: markdown
-          content: "# Revisión de atípicos"
-          metadata:
-            id: VHzOqYFZ2Ow8
+            execution_start: 1776397289524
+            execution_millis: 0
+            execution_context_id: dae28572-cade-4e9e-978f-5956d70dcdf7
         - id: 836ad098978c4a179a1fefcac417975b
           blockGroup: 51e132fd635d4d6c9c7f42564f98dfbd
           sortingKey: "000021"
@@ -403,9 +424,9 @@ project:
         - id: e880012662814afb947023419813d50c
           blockGroup: ad754f5bc21541879b104a3dab829c4f
           sortingKey: "000023"
-          contentHash: ae26f2dd
-          executionFinishedAt: 2026-04-16T12:33:47.656Z
-          executionStartedAt: 2026-04-16T12:33:46.961Z
+          contentHash: 537b378d
+          executionFinishedAt: 2026-04-17T03:41:30.343Z
+          executionStartedAt: 2026-04-17T03:41:29.572Z
           type: code
           content: >-
             # Columnas numéricas para revisar atípicos
@@ -424,7 +445,7 @@ project:
 
             # Crear subplots (2 filas x 4 columnas porque son 8 variables)
 
-            fig, axes = plt.subplots(2, 4, figsize=(20,10))
+            fig, axes = plt.subplots(2, 4, figsize=(20,30))
 
             axes = axes.flatten()
 
@@ -448,40 +469,19 @@ project:
 
             plt.show()
           metadata:
-            execution_start: 1776342826961
-            execution_millis: 695
-            execution_context_id: d71a48bd-b011-4f28-9478-c99688d3da06
-        - id: 8ecb69b76acd444c88a1e55410faa5d3
-          blockGroup: 75a2e000d6d145c0a5093e457b7a06b2
-          sortingKey: "000024"
-          type: text-cell-p
-          content: "monthly_income (ingreso mensual)\r
-
-            - La mayoría de los ingresos están concentrados en un rango bajo-medio\r
-
-            - Existen valores atípicos, incluyendo uno muy alto (~10 millones)\r
-
-            - Existen valores negativos o muy bajos\r
-
-            Conclusión: es una variable con alta dispersión y outliers extremos, probablemente necesita limpieza o
-            transformación.\r"
-          metadata:
-            formattedRanges:
-              - type: marks
-                marks:
-                  bold: true
-                toCodePoint: 32
-                fromCodePoint: 0
+            execution_start: 1776397289572
+            execution_millis: 771
+            execution_context_id: dae28572-cade-4e9e-978f-5956d70dcdf7
         - id: 677f1d1375a44a8e8e977144f95ff9dc
           blockGroup: f90cf7246f174e059d88962b6483f894
-          sortingKey: "000025"
+          sortingKey: "000024"
           type: text-cell-p
           content: "EXPLICACIÓN DE CADA VARIABLE:"
           metadata:
             formattedRanges: []
         - id: f99b3d20786b431b9be81e54c8950ca7
           blockGroup: e0d3c24c11584b3ca9ad63258ecdcb42
-          sortingKey: "000026"
+          sortingKey: "000025"
           type: text-cell-p
           content: "age (edad)\r
 
@@ -500,6 +500,27 @@ project:
                 marks:
                   bold: true
                 toCodePoint: 10
+                fromCodePoint: 0
+        - id: 8ecb69b76acd444c88a1e55410faa5d3
+          blockGroup: 75a2e000d6d145c0a5093e457b7a06b2
+          sortingKey: "000026"
+          type: text-cell-p
+          content: "monthly_income (ingreso mensual)\r
+
+            - La mayoría de los ingresos están concentrados en un rango bajo-medio\r
+
+            - Existen valores atípicos, incluyendo uno muy alto (~10 millones)\r
+
+            - Existen valores negativos o muy bajos\r
+
+            Conclusión: es una variable con alta dispersión y outliers extremos, probablemente necesita limpieza o
+            transformación.\r"
+          metadata:
+            formattedRanges:
+              - type: marks
+                marks:
+                  bold: true
+                toCodePoint: 32
                 fromCodePoint: 0
         - id: db1b913393aa4351b9e836c728921413
           blockGroup: 370a75f973344093ac952dce420c875f
@@ -557,16 +578,9 @@ project:
                   bold: true
                 toCodePoint: 44
                 fromCodePoint: 0
-        - id: 1e202700d7724f4093893b4171a2ad5f
-          blockGroup: 976030376005410c887bc3ebee809d8b
-          sortingKey: "000030"
-          type: text-cell-p
-          content: "\r"
-          metadata:
-            formattedRanges: []
         - id: 86b8072151c549cb986f008acc9e9f83
           blockGroup: 090705ebc55240eea247de3e3d99cac8
-          sortingKey: "000031"
+          sortingKey: "000030"
           type: text-cell-p
           content: "support_tickets (tickets de soporte)\r
 
@@ -582,9 +596,56 @@ project:
                   bold: true
                 toCodePoint: 36
                 fromCodePoint: 0
+        - id: 57d7a2cfd62c490a91f10cb353a0b9c7
+          blockGroup: 18b6851eb76449749dba927a2a6e3050
+          sortingKey: "000031"
+          type: text-cell-p
+          content: "last_payment_amount (último pago)\r
+
+            - La mayoría de pagos está entre 10,000 y 25,000.\r
+
+            - Hay outliers negativos (posible error o devolución) y unos muy altos (~60,000+)\r
+
+            Conclusión: variable con bastante dispersión.\r"
+          metadata:
+            formattedRanges:
+              - type: marks
+                marks:
+                  bold: true
+                toCodePoint: 32
+                fromCodePoint: 0
+        - id: 1e202700d7724f4093893b4171a2ad5f
+          blockGroup: 976030376005410c887bc3ebee809d8b
+          sortingKey: "000032"
+          type: text-cell-p
+          content: "\r"
+          metadata:
+            formattedRanges: []
+        - id: 7562f75fcf2e474a8ec969749ecc861c
+          blockGroup: 6e50947c312b4c23bfa740dbae54f198
+          sortingKey: "000033"
+          type: text-cell-p
+          content: "En resumen , las variables con más outliers son monthly_income, account_balance, last_payment_amount,
+            avg_session_time\r
+
+            Las variables más estables son tenure_months, support_tickets\r
+
+            Existen posibles errores de datos (valores negativos o muy altos)."
+          metadata:
+            formattedRanges:
+              - type: marks
+                marks:
+                  bold: true
+                toCodePoint: 118
+                fromCodePoint: 48
+              - type: marks
+                marks:
+                  bold: true
+                toCodePoint: 181
+                fromCodePoint: 151
         - id: 00fa7d180df94379a97037ecfd1e112b
           blockGroup: c1e0fc0aae0641a3931728a87a25d176
-          sortingKey: "000032"
+          sortingKey: "000034"
           type: text-cell-p
           content: "account_balance (saldo de cuenta)\r
 
@@ -602,19 +663,19 @@ project:
                 fromCodePoint: 0
         - id: 1002581c3a974263b71cc93cf928d09e
           blockGroup: 43e96df5cdb94e908606906e676565ca
-          sortingKey: "000033"
+          sortingKey: "000035"
           contentHash: c354037b
-          executionFinishedAt: 2026-04-16T12:33:47.706Z
-          executionStartedAt: 2026-04-16T12:33:47.705Z
+          executionFinishedAt: 2026-04-17T03:41:30.393Z
+          executionStartedAt: 2026-04-17T03:41:30.392Z
           type: code
           content: >-
             data.drop(columns=['customer_id']).describe()
 
             # Muestra las medidas estadísticas, descartando la columna que identifica al cliente.
           metadata:
-            execution_start: 1776342827705
+            execution_start: 1776397290392
             execution_millis: 1
-            execution_context_id: d71a48bd-b011-4f28-9478-c99688d3da06
+            execution_context_id: dae28572-cade-4e9e-978f-5956d70dcdf7
             deepnote_table_state:
               sortBy: []
               filters: []
@@ -636,49 +697,19 @@ project:
               cellFormattingRules: []
               wrappedTextColumnIds: []
             deepnote_table_loading: false
-        - id: d5c5c1c2b7944f5d95fa01e2a38412cf
-          blockGroup: 6670791dcd414f60b5fac1efd73e70ea
-          sortingKey: "000034"
-          contentHash: 5c32a935
-          executionFinishedAt: 2026-04-16T12:33:47.754Z
-          executionStartedAt: 2026-04-16T12:33:47.753Z
-          type: code
-          content: data.describe(include="object")
-          metadata:
-            execution_start: 1776342827753
-            execution_millis: 1
-            execution_context_id: d71a48bd-b011-4f28-9478-c99688d3da06
-            deepnote_table_state:
-              sortBy: []
-              filters: []
-              pageSize: 25
-              pageIndex: 0
-              columnOrder:
-                - gender
-                - subscription_type
-                - region
-                - payment_method
-                - is_active
-                - preferred_device
-              hiddenColumnIds: []
-              columnDisplayNames: []
-              conditionalFilters: []
-              cellFormattingRules: []
-              wrappedTextColumnIds: []
-            deepnote_table_loading: false
         - id: fe373c1bad494c8b80e22ea5878f006a
           blockGroup: 2aaca0262c6144a3952eed006ced5426
-          sortingKey: "000035"
+          sortingKey: "000036"
           type: text-cell-p
           content: ""
           metadata:
             formattedRanges: []
         - id: 0224cd84c6a94dc082a048cdc2b7648a
           blockGroup: 33a43935732241808707ade504a2533a
-          sortingKey: "000036"
+          sortingKey: "000037"
           contentHash: 9154e2ac
-          executionFinishedAt: 2026-04-16T12:33:47.802Z
-          executionStartedAt: 2026-04-16T12:33:47.801Z
+          executionFinishedAt: 2026-04-17T03:41:30.485Z
+          executionStartedAt: 2026-04-17T03:41:30.484Z
           type: code
           content: >-
             # Detectar inconsistencias
@@ -699,9 +730,9 @@ project:
 
             inconsistentes
           metadata:
-            execution_start: 1776342827801
+            execution_start: 1776397290484
             execution_millis: 1
-            execution_context_id: d71a48bd-b011-4f28-9478-c99688d3da06
+            execution_context_id: dae28572-cade-4e9e-978f-5956d70dcdf7
             deepnote_table_state:
               sortBy: []
               filters: []
@@ -731,9 +762,39 @@ project:
               wrappedTextColumnIds: []
             deepnote_table_invalid: false
             deepnote_table_loading: false
+        - id: d5c5c1c2b7944f5d95fa01e2a38412cf
+          blockGroup: 6670791dcd414f60b5fac1efd73e70ea
+          sortingKey: "000038"
+          contentHash: 5c32a935
+          executionFinishedAt: 2026-04-17T03:41:30.440Z
+          executionStartedAt: 2026-04-17T03:41:30.440Z
+          type: code
+          content: data.describe(include="object")
+          metadata:
+            execution_start: 1776397290440
+            execution_millis: 0
+            execution_context_id: dae28572-cade-4e9e-978f-5956d70dcdf7
+            deepnote_table_state:
+              sortBy: []
+              filters: []
+              pageSize: 25
+              pageIndex: 0
+              columnOrder:
+                - gender
+                - subscription_type
+                - region
+                - payment_method
+                - is_active
+                - preferred_device
+              hiddenColumnIds: []
+              columnDisplayNames: []
+              conditionalFilters: []
+              cellFormattingRules: []
+              wrappedTextColumnIds: []
+            deepnote_table_loading: false
         - id: 0a3c7f42cece4c4aabe41cffb9c20c74
           blockGroup: 638e0120de8045919e7c670daabf2512
-          sortingKey: "000037"
+          sortingKey: "000039"
           type: text-cell-p
           content: "Comentario: Tabla de inconsistencias totales. Aquí podemos ver claramente la existencia de datos
             inconsistentes como en age que tenemos un -5, monthly_income = -100000, avg_session_time con un valor
@@ -762,21 +823,40 @@ project:
                 fromCodePoint: 168
         - id: 61f93ea0956e483f8ef0aad197895c1f
           blockGroup: 18f76f48f4c648698e807a0b11537a07
-          sortingKey: "000038"
+          sortingKey: "000040"
           type: text-cell-h1
           content: Revisión de inconsistencias
           metadata:
             formattedRanges: []
         - id: b8b42494cbd045bca2984a1e92d1609e
           blockGroup: 5c6120f1a63048778aa1f7e64e86a2fc
-          sortingKey: "000039"
+          sortingKey: "000041"
           type: text-cell-h1
           content: Revisión de inconsistencias para cualitativas
           metadata:
             formattedRanges: []
+        - id: 9a4c48fd70ad4731be7c2978bfd5251b
+          blockGroup: 9dea2ef145ac41088a1320849e1ee120
+          sortingKey: "000042"
+          contentHash: 96c2eeac
+          executionFinishedAt: 2026-04-17T03:41:30.532Z
+          executionStartedAt: 2026-04-17T03:41:30.532Z
+          type: code
+          content: data.gender.unique()
+          metadata:
+            execution_start: 1776397290532
+            execution_millis: 0
+            execution_context_id: dae28572-cade-4e9e-978f-5956d70dcdf7
+        - id: 0fd4a105293b44e28797c383c32370f7
+          blockGroup: 131248b06cf14dc4a256d03c284ecbc4
+          sortingKey: "000043"
+          type: text-cell-p
+          content: Tipo de subscripcion
+          metadata:
+            formattedRanges: []
         - id: 1ff188822f724229bda240d19949873f
           blockGroup: ccb9a21eef14400688f733734d0c8ae1
-          sortingKey: "000040"
+          sortingKey: "000044"
           type: text-cell-p
           content: Género
           metadata:
@@ -786,21 +866,9 @@ project:
                   underline: true
                 toCodePoint: 6
                 fromCodePoint: 0
-        - id: 9a4c48fd70ad4731be7c2978bfd5251b
-          blockGroup: 9dea2ef145ac41088a1320849e1ee120
-          sortingKey: "000041"
-          contentHash: 96c2eeac
-          executionFinishedAt: 2026-04-16T12:33:47.850Z
-          executionStartedAt: 2026-04-16T12:33:47.849Z
-          type: code
-          content: data.gender.unique()
-          metadata:
-            execution_start: 1776342827849
-            execution_millis: 1
-            execution_context_id: d71a48bd-b011-4f28-9478-c99688d3da06
         - id: 993025135f1c477b9aebc9c52e06e4fc
           blockGroup: 19f519d3f93f476c8491f2b806bb86ee
-          sortingKey: "000042"
+          sortingKey: "000045"
           type: text-cell-p
           content: Región
           metadata:
@@ -812,31 +880,55 @@ project:
                 fromCodePoint: 0
         - id: a108efff365c4cbc9d3e8593877fef63
           blockGroup: ca6fb46f8e4d42a8b8b800fa25236f1e
-          sortingKey: "000043"
+          sortingKey: "000046"
           contentHash: dd888b6f
-          executionFinishedAt: 2026-04-16T12:33:47.938Z
-          executionStartedAt: 2026-04-16T12:33:47.937Z
+          executionFinishedAt: 2026-04-17T03:41:30.844Z
+          executionStartedAt: 2026-04-17T03:41:30.844Z
           type: code
           content: data.region.unique()
           metadata:
-            execution_start: 1776342827937
-            execution_millis: 1
-            execution_context_id: d71a48bd-b011-4f28-9478-c99688d3da06
+            execution_start: 1776397290844
+            execution_millis: 0
+            execution_context_id: dae28572-cade-4e9e-978f-5956d70dcdf7
         - id: 095f98c843a84045b7362f820449c033
           blockGroup: 601a7532983b426b8dfcf7bab220a413
-          sortingKey: "000044"
+          sortingKey: "000047"
           contentHash: 1d76f57b
-          executionFinishedAt: 2026-04-16T12:33:47.893Z
-          executionStartedAt: 2026-04-16T12:33:47.893Z
+          executionFinishedAt: 2026-04-17T03:41:30.576Z
+          executionStartedAt: 2026-04-17T03:41:30.576Z
           type: code
           content: data.subscription_type.unique()
           metadata:
-            execution_start: 1776342827893
+            execution_start: 1776397290576
             execution_millis: 0
-            execution_context_id: d71a48bd-b011-4f28-9478-c99688d3da06
+            execution_context_id: dae28572-cade-4e9e-978f-5956d70dcdf7
+        - id: 998cc410b9d0449bb761140f7b8287b9
+          blockGroup: 0007b58c4fcc47acb9c1b250643755ac
+          sortingKey: "000048"
+          contentHash: 808e122d
+          executionFinishedAt: 2026-04-17T03:41:30.888Z
+          executionStartedAt: 2026-04-17T03:41:30.888Z
+          type: code
+          content: data.payment_method.unique()
+          metadata:
+            execution_start: 1776397290888
+            execution_millis: 0
+            execution_context_id: dae28572-cade-4e9e-978f-5956d70dcdf7
+        - id: 136420eced5d4774a5a54beb3fb14a17
+          blockGroup: d2d0df7e4db041758ac938dcafa6d076
+          sortingKey: "000049"
+          contentHash: cb46ca4b
+          executionFinishedAt: 2026-04-17T03:41:30.932Z
+          executionStartedAt: 2026-04-17T03:41:30.932Z
+          type: code
+          content: data.is_active.unique()
+          metadata:
+            execution_start: 1776397290932
+            execution_millis: 0
+            execution_context_id: dae28572-cade-4e9e-978f-5956d70dcdf7
         - id: de4972480d6f47b6945515a678dab1cf
           blockGroup: f7b4263fdac4442791cef3e1512e1621
-          sortingKey: "000045"
+          sortingKey: "000050"
           type: text-cell-p
           content: Método de Pago
           metadata:
@@ -846,33 +938,9 @@ project:
                   underline: true
                 toCodePoint: 14
                 fromCodePoint: 0
-        - id: 6e4759e2fc944255ab8d71ecf41cb680
-          blockGroup: a26847446cf84dc0b643e755777d48af
-          sortingKey: "000046"
-          type: text-cell-p
-          content: Tipo de Subscripción
-          metadata:
-            formattedRanges:
-              - type: marks
-                marks:
-                  underline: true
-                toCodePoint: 20
-                fromCodePoint: 0
-        - id: cfcd1b63a42a42bc88df2d4d0e067f0d
-          blockGroup: f9816f22702b46f99988d175ffa588c9
-          sortingKey: "000047"
-          contentHash: 808e122d
-          executionFinishedAt: 2026-04-16T12:33:47.989Z
-          executionStartedAt: 2026-04-16T12:33:47.989Z
-          type: code
-          content: data.payment_method.unique()
-          metadata:
-            execution_start: 1776342827989
-            execution_millis: 0
-            execution_context_id: d71a48bd-b011-4f28-9478-c99688d3da06
         - id: 3d5715ab92c34b9a816b340719930d40
           blockGroup: 99bcb20a2d6c4f91abfbfdf70ac26cfd
-          sortingKey: "000048"
+          sortingKey: "000051"
           type: text-cell-p
           content: Dispositivo favorito
           metadata:
@@ -884,19 +952,19 @@ project:
                 fromCodePoint: 0
         - id: cb47130888084d36a69494c064f3291a
           blockGroup: 5981ea8358f7499abc219eab63178bde
-          sortingKey: "000049"
+          sortingKey: "000052"
           contentHash: 184ceeda
-          executionFinishedAt: 2026-04-16T12:33:48.085Z
-          executionStartedAt: 2026-04-16T12:33:48.085Z
+          executionFinishedAt: 2026-04-17T03:41:30.976Z
+          executionStartedAt: 2026-04-17T03:41:30.976Z
           type: code
           content: data.preferred_device.unique()
           metadata:
-            execution_start: 1776342828085
+            execution_start: 1776397290976
             execution_millis: 0
-            execution_context_id: d71a48bd-b011-4f28-9478-c99688d3da06
+            execution_context_id: dae28572-cade-4e9e-978f-5956d70dcdf7
         - id: 710e8a76f59b45d1b3e95c4bba3a4250
           blockGroup: 858cf82144a64139861742341b4e54d5
-          sortingKey: "000050"
+          sortingKey: "000053"
           type: text-cell-p
           content: Es activo
           metadata:
@@ -906,42 +974,42 @@ project:
                   underline: true
                 toCodePoint: 9
                 fromCodePoint: 0
-        - id: fbe1587ec16345c1aae27b62a8d43232
-          blockGroup: 11c27cdc6d6e413386daf02716457e76
-          sortingKey: "000051"
-          type: text-cell-h1
-          content: Revisión de duplicados
-          metadata:
-            formattedRanges: []
         - id: 9fab83fe28bc4ce8bef4ad3fc27a4cdb
           blockGroup: 39125776d72d48d8a9b80a98d57821a8
-          sortingKey: "000052"
+          sortingKey: "000054"
           contentHash: cb40baab
-          executionFinishedAt: 2026-04-16T12:33:48.238Z
-          executionStartedAt: 2026-04-16T12:33:48.237Z
+          executionFinishedAt: 2026-04-17T03:41:31.020Z
+          executionStartedAt: 2026-04-17T03:41:31.020Z
           type: code
           content: >-
             # Revisa la existencia de duplicados
 
             data.duplicated().sum()
           metadata:
-            execution_start: 1776342828237
-            execution_millis: 1
-            execution_context_id: d71a48bd-b011-4f28-9478-c99688d3da06
+            execution_start: 1776397291020
+            execution_millis: 0
+            execution_context_id: dae28572-cade-4e9e-978f-5956d70dcdf7
         - id: 9814ec66f5e24bc1a0ea746c325715e4
           blockGroup: 4970bb2773e445f2b388b1f136c53f22
-          sortingKey: "000053"
+          sortingKey: "000055"
           type: text-cell-p
           content: Esto quiere decir que existen 1000 datos duplicados, por lo tanto cuando se realice la limpieza en lugar de
             21000 datos solo contaremos con 20000 o menos
           metadata:
             formattedRanges: []
+        - id: fbe1587ec16345c1aae27b62a8d43232
+          blockGroup: 11c27cdc6d6e413386daf02716457e76
+          sortingKey: "000056"
+          type: text-cell-h1
+          content: Revisión de duplicados
+          metadata:
+            formattedRanges: []
         - id: 840409923fd447b4967640a69ba835f4
           blockGroup: c54cb6e7b57f4405b026e2c2f2abe2f5
-          sortingKey: "000054"
+          sortingKey: "000057"
           type: text-cell-p
           content: Gracias a la variable customer_id podemos identificar los datos duplicados, los cuales confirman la identidad
-            entre datos.
+            entre datos. Concluyendo que hay 2000 duplicados.
           metadata:
             formattedRanges:
               - type: marks
@@ -949,28 +1017,60 @@ project:
                   bold: true
                 toCodePoint: 33
                 fromCodePoint: 22
+        - id: 5b033d4019fc46eaa193815672d1ce33
+          blockGroup: 1b76d013b1db46b7835ed714c24e4f2a
+          sortingKey: "000058"
+          contentHash: 5c32a935
+          executionFinishedAt: 2026-04-17T03:41:31.112Z
+          executionStartedAt: 2026-04-17T03:41:31.112Z
+          type: code
+          content: data.describe(include="object")
+          metadata:
+            execution_start: 1776397291112
+            execution_millis: 0
+            execution_context_id: dae28572-cade-4e9e-978f-5956d70dcdf7
         - id: d02ae9c2a9134a02a593bf05ce1f9d70
           blockGroup: eeff2ed552ed49bfb5f7b7b3771b6100
-          sortingKey: "000055"
+          sortingKey: "000059"
           type: markdown
           content: "# Limpieza y transformación"
           metadata:
             id: -kcYdKIZ2cjt
+        - id: 20769b0b27fe43b28ab501259be86291
+          blockGroup: 2e9cabb5e001406996a8990619f0d02f
+          sortingKey: "000060"
+          type: text-cell-p
+          content: ""
+          metadata:
+            formattedRanges: []
+        - id: 84e137042e8f442a9f0682acd02a256a
+          blockGroup: b901bf1cbb5d43a59c1ca2a7bbaa148e
+          sortingKey: "000061"
+          type: text-cell-p
+          content: Diferenciamos las variables cualitativas de las cuantitativas agrupándolas en dos arreglos diferentes para
+            manejarlas de forma correcta más adelante.
+          metadata:
+            formattedRanges:
+              - type: marks
+                marks:
+                  bold: true
+                toCodePoint: 61
+                fromCodePoint: 0
         - id: b8f6abf071dc41c4b81b272eca003170
           blockGroup: 969cf8e8e42346c59b15eb390f8c9982
-          sortingKey: "000056"
+          sortingKey: "000062"
           contentHash: 5f2d0c33
-          executionFinishedAt: 2026-04-16T12:33:48.287Z
-          executionStartedAt: 2026-04-16T12:33:48.285Z
+          executionFinishedAt: 2026-04-17T03:41:31.064Z
+          executionStartedAt: 2026-04-17T03:41:31.064Z
           type: code
           content: >-
             # Obtiene los registos duplicados
 
             data[data.duplicated(keep=False)].sort_values(by='customer_id')
           metadata:
-            execution_start: 1776342828285
-            execution_millis: 2
-            execution_context_id: d71a48bd-b011-4f28-9478-c99688d3da06
+            execution_start: 1776397291064
+            execution_millis: 0
+            execution_context_id: dae28572-cade-4e9e-978f-5956d70dcdf7
             deepnote_table_state:
               sortBy: []
               filters: []
@@ -999,155 +1099,12 @@ project:
               cellFormattingRules: []
               wrappedTextColumnIds: []
             deepnote_table_loading: false
-        - id: 54e959be2fd94206bce31ee29c8477de
-          blockGroup: c4fc9409be8346d7a9bb90a97dca9826
-          sortingKey: "000057"
-          type: text-cell-p
-          content: "Comentario respecto a la limpieza de duplicados: Con esta función podemos eliminar los duplicados
-            (originalmente 1000 datos duplicados) de los 21000 datos originales, luego de la limpieza la cantidad de
-            datos se redujo."
-          metadata:
-            formattedRanges:
-              - type: marks
-                marks:
-                  bold: true
-                toCodePoint: 48
-                fromCodePoint: 0
-        - id: a35ad0d6c34249c3a11c2894f59649a5
-          blockGroup: 93b202ec6b29436fbf56c087dbfef253
-          sortingKey: "000058"
-          type: text-cell-p
-          content: "Limpieza de Duplicados:"
-          metadata:
-            formattedRanges:
-              - type: marks
-                marks:
-                  bold: true
-                toCodePoint: 23
-                fromCodePoint: 0
-        - id: 79d1f654d991462fb09a15af166dbd2e
-          blockGroup: eb5116dd3d6449a3bc2b9842135ad01e
-          sortingKey: "000059"
-          type: text-cell-p
-          content: "Limpieza Nulos:"
-          metadata:
-            formattedRanges:
-              - type: marks
-                marks:
-                  bold: true
-                toCodePoint: 15
-                fromCodePoint: 0
-        - id: 6df5064e30084479a9902cea8a816563
-          blockGroup: 9e7f50ec5d8f4be3bb3ad8b9f0f0e276
-          sortingKey: "000060"
-          contentHash: b3dc30c0
-          executionFinishedAt: 2026-04-16T12:33:48.333Z
-          executionStartedAt: 2026-04-16T12:33:48.333Z
-          type: code
-          content: >-
-            data = data.drop_duplicates()
-
-            data.shape
-
-            # Con esto eliminamos los duplicados (1000 datos) del total (21000), dandonos un total de 20000 datos.
-          metadata:
-            execution_start: 1776342828333
-            execution_millis: 0
-            execution_context_id: d71a48bd-b011-4f28-9478-c99688d3da06
-            id: uXG_58zF2qJO
-        - id: a0d24e3a89ee487684a6d89a51a2073e
-          blockGroup: d02e439900934ccab1ea548bc9a97550
-          sortingKey: "000061"
-          contentHash: 6c2d6d66
-          executionFinishedAt: 2026-04-16T12:33:48.382Z
-          executionStartedAt: 2026-04-16T12:33:48.381Z
-          type: code
-          content: >-
-            columnas_con_nulos = data.isna().sum()[data.isna().sum() > 0]
-
-            porcentaje_nulos = (columnas_con_nulos / data.shape[0]) * 100
-
-
-            resultado = pd.DataFrame({
-                "Cantidad Nulos": columnas_con_nulos,
-                "Porcentaje Nulos (%)": porcentaje_nulos
-            }).round(2)
-
-
-            resultado
-          metadata:
-            execution_start: 1776342828381
-            execution_millis: 1
-            execution_context_id: d71a48bd-b011-4f28-9478-c99688d3da06
-        - id: b913969f4d8e4315a0180ea4fd274892
-          blockGroup: 80ca2afd6af54a10a23eca6b9b677111
-          sortingKey: "000062"
-          type: text-cell-p
-          content: Primero, volvemos a visualizar los nulos para comparar
-          metadata:
-            formattedRanges: []
-        - id: 5928ccf6689644b583da4ae98468a19b
-          blockGroup: 56c4420666364d9b9f10349ea93d3e4b
-          sortingKey: "000063"
-          type: text-cell-p
-          content: Volvemos a revisar los nulos, después de la limpieza de duplicados para observar como se vio alterada. Podemos
-            observar que disminuyeron la cantidad de datos Nulos.
-          metadata:
-            formattedRanges: []
-        - id: c3bcb02b4df945afb9b78484b1343f27
-          blockGroup: f1c64305355c429497ea68bcbadca6b3
-          sortingKey: "000064"
-          type: text-cell-p
-          content: age                                        1036                                     984
-          metadata:
-            formattedRanges: []
-        - id: 4bab888f16f84581971b7f5e0796375e
-          blockGroup: 485429b444484127aade9d1a9d64b0d3
-          sortingKey: "000065"
-          type: text-cell-p
-          content: monthly_income                   1038                                     985
-          metadata:
-            formattedRanges: []
-        - id: 7f7abf5b514d4b6884816631e6338ddd
-          blockGroup: b08f1ceba8a047bba5739024ebaac739
-          sortingKey: "000066"
-          type: text-cell-p
-          content: payment_method                 1047                                     1000
-          metadata:
-            formattedRanges: []
-        - id: 20769b0b27fe43b28ab501259be86291
-          blockGroup: 2e9cabb5e001406996a8990619f0d02f
-          sortingKey: "000067"
-          type: text-cell-p
-          content: ""
-          metadata:
-            formattedRanges: []
-        - id: 053c335d5371445899ed0a3a79556cc7
-          blockGroup: 3f61d7e9ce484e9982957404f8bca0fc
-          sortingKey: "000068"
-          type: text-cell-p
-          content: gender                                  1053                                     1000
-          metadata:
-            formattedRanges: []
-        - id: 84e137042e8f442a9f0682acd02a256a
-          blockGroup: b901bf1cbb5d43a59c1ca2a7bbaa148e
-          sortingKey: "000069"
-          type: text-cell-p
-          content: Diferenciamos las variables cualitativas de las cuantitativas agrupándolas en dos arreglos diferentes para
-            manejarlas de forma correcta más adelante
-          metadata:
-            formattedRanges:
-              - type: marks
-                marks:
-                  bold: true
-                toCodePoint: 61
-                fromCodePoint: 0
         - id: 3e400ffebe5b4dbbb45be70806c97919
           blockGroup: d13bd65b946345dc831720069643bbad
-          sortingKey: "000070"
+          sortingKey: "000063"
           contentHash: 37e642dd
-          executionFinishedAt: 2026-04-16T12:33:48.429Z
-          executionStartedAt: 2026-04-16T12:33:48.429Z
+          executionFinishedAt: 2026-04-17T03:41:31.156Z
+          executionStartedAt: 2026-04-17T03:41:31.156Z
           type: code
           content: >-
             # Define las variables cualitativas y cuantitativas disponibles
@@ -1158,35 +1115,22 @@ project:
             categorical_features = ['gender', 'payment_method', 'preferred_device', 'region', 'subscription_type',
             'is_active']
           metadata:
-            execution_start: 1776342828429
+            execution_start: 1776397291156
             execution_millis: 0
-            execution_context_id: d71a48bd-b011-4f28-9478-c99688d3da06
-        - id: 7f65d9f3dfd34533bd232ccebb0570d2
-          blockGroup: 0b155c2e3ff7444c90fffd89c09943a3
-          sortingKey: "000071"
-          type: text-cell-p
-          content: "                                   Antes de la Limpieza    Después de la Limpieza"
-          metadata:
-            formattedRanges: []
+            execution_context_id: dae28572-cade-4e9e-978f-5956d70dcdf7
         - id: da013470e5b449ccb95be6b357c94cd1
           blockGroup: ffc56b1d0dcb42c3a0e5b99878c82726
-          sortingKey: "000072"
+          sortingKey: "000064"
           type: text-cell-p
           content: Luego de definir Windsorizer podemos definir los Pipeline tanto para variables cuantitativas como cualitativas
           metadata:
             formattedRanges: []
-        - id: 39d5138a03fb4a26ac27dabc4a265d0a
-          blockGroup: a3bac50d8cf64471a3d00ee7db08702a
-          sortingKey: "000073"
-          type: text-cell-h2
-          content: "Pipeline Variables Cuantitativas:"
-          metadata:
-            formattedRanges: []
         - id: 401e220668dc49d3bd2fd65cb462d2f4
           blockGroup: 9918cf2402d84697b0e817d75c5d42ba
-          sortingKey: "000074"
+          sortingKey: "000065"
           type: text-cell-p
-          content: Creamos la clase Windsorizer para definir su función
+          content: Creamos la clase Windsorizer para tratar los valores atípicos (outliers) reemplazando los valores extremos (muy
+            altos o muy bajos) por percentiles específicos
           metadata:
             formattedRanges:
               - type: marks
@@ -1194,12 +1138,27 @@ project:
                   bold: true
                 toCodePoint: 28
                 fromCodePoint: 17
+        - id: 7271d20632b24df89a8a619d4f2e0694
+          blockGroup: 8b97269582bb40f288ff5901a4710ee6
+          sortingKey: "000066"
+          type: text-cell-p
+          content: En este caso, Winsorizer está actuando con el 5% más bajo y el 5% más alto de los datos atípicos (percentil 5 y
+            percentil 95). De este modo los valores extremos desaparecen.
+          metadata:
+            formattedRanges: []
+        - id: 7ff5ae0fec4347f990e829c84b806ee5
+          blockGroup: b941a3b54f854ffa8c17e9668ccaae22
+          sortingKey: "000067"
+          type: text-cell-p
+          content: Primero se define la clase con sus funciones para eliminar los valores duplicados
+          metadata:
+            formattedRanges: []
         - id: 73925237d97c4550a3aa99694c717081
           blockGroup: 12898c9f9f934d0d979011a7fffe92f7
-          sortingKey: "000075"
-          contentHash: 84fb25b6
-          executionFinishedAt: 2026-04-16T12:33:48.477Z
-          executionStartedAt: 2026-04-16T12:33:48.477Z
+          sortingKey: "000068"
+          contentHash: a30360ff
+          executionFinishedAt: 2026-04-17T03:41:31.204Z
+          executionStartedAt: 2026-04-17T03:41:31.204Z
           type: code
           content: >-
             class Winsorizer(BaseEstimator, TransformerMixin): #le entregas los minimos o utiliza los default
@@ -1222,7 +1181,7 @@ project:
                 self.limits = limits
 
               def fit(self, X, y=None):
-                # Guardar nombres si es DataFrame, si no generar nombres genéricos
+                # Guardar nombres si es DataFrame,sino generar nombres genéricos
                 if isinstance(X, pd.DataFrame):
                   self.columns_ = X.columns
                 else:
@@ -1244,15 +1203,60 @@ project:
                 else:
                   return np.array(input_features)
           metadata:
-            execution_start: 1776342828477
+            execution_start: 1776397291204
             execution_millis: 0
-            execution_context_id: d71a48bd-b011-4f28-9478-c99688d3da06
+            execution_context_id: dae28572-cade-4e9e-978f-5956d70dcdf7
+        - id: 39d5138a03fb4a26ac27dabc4a265d0a
+          blockGroup: a3bac50d8cf64471a3d00ee7db08702a
+          sortingKey: "000069"
+          type: text-cell-h2
+          content: "Pipeline Variables Cuantitativas:"
+          metadata:
+            formattedRanges: []
+        - id: 2cd34008e4e04b47bf95943c956849f6
+          blockGroup: 17bae914b1bc4c5fb062c0e4334fed99
+          sortingKey: "000070"
+          contentHash: c5f5173f
+          executionFinishedAt: 2026-04-17T03:41:31.252Z
+          executionStartedAt: 2026-04-17T03:41:31.252Z
+          type: code
+          content: >
+            # Eliminamos los valores duplicados
+
+            class DropDuplicatesTransformer(BaseEstimator, TransformerMixin):
+                """
+                Elimina filas duplicadas dentro del pipeline, dejando solo una.
+
+                Parámetros
+                ----------
+                BaseEstimator : Clase base para estimadores en scikit-learn.
+                TransformerMixin : Clase base para transformadores en scikit-learn.
+                """
+                def fit(self, X, y=None):
+                    return self
+
+                def transform(self, X):
+                    if isinstance(X, pd.DataFrame):
+                        return X.drop_duplicates().reset_index(drop=True)
+                    return X
+          metadata:
+            execution_start: 1776397291252
+            execution_millis: 0
+            execution_context_id: dae28572-cade-4e9e-978f-5956d70dcdf7
+        - id: 15bb848a93774fea9be6af27fb19939c
+          blockGroup: 57ee649032d540e8829cd07590f168a9
+          sortingKey: "000071"
+          type: text-cell-p
+          content: Variables numéricas (age, monthly_income, tenure_months, num_logins_last_month, avg_session_time,
+            support_tickets, account_balance, last_payment_amount) → Se imputan con la media
+          metadata:
+            formattedRanges: []
         - id: 9b59f68b88e14e78a19c6204c9828f9d
           blockGroup: 18d9c2dcc78b4dbc9bab841d19e9c553
-          sortingKey: "000076"
-          contentHash: c6f657d1
-          executionFinishedAt: 2026-04-16T12:33:48.521Z
-          executionStartedAt: 2026-04-16T12:33:48.521Z
+          sortingKey: "000072"
+          contentHash: 82fc5d2a
+          executionFinishedAt: 2026-04-17T03:41:31.296Z
+          executionStartedAt: 2026-04-17T03:41:31.296Z
           type: code
           content: >-
             # Define el pipeline para las variables cuantitativas
@@ -1260,27 +1264,42 @@ project:
             pipeline_numerico = Pipeline(
                 steps=[
                     ("winsorizer", Winsorizer()),
-                    ("imputacion", SimpleImputer(strategy="mean")),
-                    ("escalado", StandardScaler())
+                    ("imputacion", SimpleImputer(strategy="mean")), # Detecta Nulos y reemplaza por media
+                    ("escalado", StandardScaler()) # Varianza
                 ]
             )
           metadata:
-            execution_start: 1776342828521
+            execution_start: 1776397291296
             execution_millis: 0
-            execution_context_id: d71a48bd-b011-4f28-9478-c99688d3da06
+            execution_context_id: dae28572-cade-4e9e-978f-5956d70dcdf7
         - id: b0e602c67b9f42c7af1cd6fd13a71fd8
           blockGroup: 872ee554b93d423a8470d8fb97503346
-          sortingKey: "000077"
+          sortingKey: "000073"
           type: text-cell-h2
           content: "Pipeline Variables Cualitativas:"
           metadata:
             formattedRanges: []
+        - id: cf36872ae0b44e02b53145842e804734
+          blockGroup: 6df6f8d1538d493aae5524c9e028784e
+          sortingKey: "000074"
+          type: text-cell-p
+          content: Y ahora que ya están definidas las funciones para el tratamiento de las variables cuantitativas podemos
+            integrarlas al pipeline numerico
+          metadata:
+            formattedRanges: []
+        - id: 9b56c802b8c548258fbe4ff892272f70
+          blockGroup: dbe14f9fa75644aba0c438e20b6e5c0d
+          sortingKey: "000075"
+          type: text-cell-p
+          content: Ahora procedemos a definir el pipeline para las variables cualitativas con sus funciones correspondientes
+          metadata:
+            formattedRanges: []
         - id: a66e6b04f141433e81e259ea9ece2ed9
           blockGroup: 7094bbbd7c714af38c52145f785f636f
-          sortingKey: "000078"
-          contentHash: 26897aab
-          executionFinishedAt: 2026-04-16T12:33:48.565Z
-          executionStartedAt: 2026-04-16T12:33:48.565Z
+          sortingKey: "000076"
+          contentHash: af4a781b
+          executionFinishedAt: 2026-04-17T03:41:31.344Z
+          executionStartedAt: 2026-04-17T03:41:31.344Z
           type: code
           content: >-
             # Define el pipeline para las variables cualitativas
@@ -1289,30 +1308,25 @@ project:
                 ("imputacion", SimpleImputer(strategy="most_frequent")),
                 ("codificacion", OneHotEncoder(handle_unknown="ignore"))
             ])
+
+            #Si hay valores Nulos los reemplazamos por el valor mas repetido osea la Moda
           metadata:
-            execution_start: 1776342828565
+            execution_start: 1776397291344
             execution_millis: 0
-            execution_context_id: d71a48bd-b011-4f28-9478-c99688d3da06
+            execution_context_id: dae28572-cade-4e9e-978f-5956d70dcdf7
         - id: c4ed845a75e443238870e7ac067889cd
           blockGroup: 811fe2eb8ff546369f9a15dc7893e4f1
-          sortingKey: "000079"
+          sortingKey: "000077"
           type: text-cell-p
           content: Integramos ambos pipeline
           metadata:
             formattedRanges: []
-        - id: 8fac24c9cae34664ac6956692851fae3
-          blockGroup: d0ed127953e14acf97471dff4109e44d
-          sortingKey: "000080"
-          type: text-cell-p
-          content: Variables numéricas (age, monthly_income) → se imputa con la media
-          metadata:
-            formattedRanges: []
         - id: 556272dd55664db885bada7a857442f6
           blockGroup: 43464d5706ae4eb8ac939cd21e65dba8
-          sortingKey: "000081"
-          contentHash: b04d0a93
-          executionFinishedAt: 2026-04-16T12:33:48.613Z
-          executionStartedAt: 2026-04-16T12:33:48.613Z
+          sortingKey: "000078"
+          contentHash: 4fd6f900
+          executionFinishedAt: 2026-04-17T03:41:31.392Z
+          executionStartedAt: 2026-04-17T03:41:31.392Z
           type: code
           content: >-
             # Integra ambos pipelines
@@ -1323,28 +1337,54 @@ project:
                     ("cat", pipeline_categorico, categorical_features)
                 ]
             )
+
+            # Tratamiento duplicados
+
+            pipeline_completo = Pipeline(
+                steps=[
+                    ("eliminar_duplicados", DropDuplicatesTransformer()),
+                    ("preprocesador", preprocesador)
+                ]
+            )
+
+            #Eliminamos duplicados y limpiamos categorias cuantitativas.
           metadata:
-            execution_start: 1776342828613
+            execution_start: 1776397291392
             execution_millis: 0
-            execution_context_id: d71a48bd-b011-4f28-9478-c99688d3da06
+            execution_context_id: dae28572-cade-4e9e-978f-5956d70dcdf7
         - id: 8c756158120a46499c8333f353936a27
           blockGroup: 7c6414a8a28c4860a0fe1082f340f4ba
-          sortingKey: "000082"
+          sortingKey: "000079"
           contentHash: 957547ae
-          executionFinishedAt: 2026-04-16T12:33:48.713Z
-          executionStartedAt: 2026-04-16T12:33:48.713Z
+          executionFinishedAt: 2026-04-17T03:41:31.440Z
+          executionStartedAt: 2026-04-17T03:41:31.440Z
           type: code
           content: data.info()
           metadata:
-            execution_start: 1776342828713
+            execution_start: 1776397291440
             execution_millis: 0
-            execution_context_id: d71a48bd-b011-4f28-9478-c99688d3da06
+            execution_context_id: dae28572-cade-4e9e-978f-5956d70dcdf7
+        - id: 24286a224ff344b683e43ccb3fe6821c
+          blockGroup: bcb8143992ec43d8936f29a7f8421ec7
+          sortingKey: "000080"
+          type: text-cell-p
+          content: Variables categóricas (gender, payment_method, preferred_device, region, subscription_type, is_active) -> Se
+            imputan con la moda
+          metadata:
+            formattedRanges: []
+        - id: 57e8d33fd55546b2950c1080f0b1c08f
+          blockGroup: f51919407f754a71b9f3957692d2441a
+          sortingKey: "000081"
+          type: text-cell-p
+          content: ""
+          metadata:
+            formattedRanges: []
         - id: 0ba88bb4889845beacf88e2672b3eaea
           blockGroup: 726e4d4cce5e41cfb39184e679828aa8
-          sortingKey: "000083"
-          contentHash: ed51b53d
-          executionFinishedAt: 2026-04-16T12:33:48.773Z
-          executionStartedAt: 2026-04-16T12:33:48.773Z
+          sortingKey: "000082"
+          contentHash: 1692f7dd
+          executionFinishedAt: 2026-04-17T03:41:31.504Z
+          executionStartedAt: 2026-04-17T03:41:31.504Z
           type: code
           content: >-
             # Estandariza los strings mal escritos (corrige mayúsculas y minúsculas)
@@ -1359,126 +1399,144 @@ project:
 
             data["subscription_type"] = data["subscription_type"].str.strip().str.lower()
 
-            # Falta esta línea:
-
             data["is_active"] = data["is_active"].str.strip().str.lower()
+
+
+            #Estandarizamos codigo para que los datos sean eficientes y de calidad.
           metadata:
-            execution_start: 1776342828773
+            execution_start: 1776397291504
             execution_millis: 0
-            execution_context_id: d71a48bd-b011-4f28-9478-c99688d3da06
+            execution_context_id: dae28572-cade-4e9e-978f-5956d70dcdf7
         - id: 5a93a799f7b84f84b41989146492b0b8
           blockGroup: e490bf1db3c34679af7bec1b8ea65e8e
-          sortingKey: "000084"
-          contentHash: 160978c1
-          executionFinishedAt: 2026-04-16T12:33:48.665Z
-          executionStartedAt: 2026-04-16T12:33:48.665Z
+          sortingKey: "000083"
+          contentHash: 41055b52
+          executionFinishedAt: 2026-04-17T03:42:15.109Z
+          executionStartedAt: 2026-04-17T03:42:15.104Z
           type: code
           content: >-
             # Limpia las inconsistencias encontradas
 
-            data = data[
-                (data["age"] > 0) &
-                (data["age"] < 120) &
-                (data["monthly_income"] >= 0) &
-                (data["avg_session_time"] >= 0) &
-                (data["account_balance"] >= 0) &
-                (data["last_payment_amount"] >= 0) &
-                (data["tenure_months"] >= 0) &
-                (data["num_logins_last_month"] >= 0) &
-                (data["support_tickets"] >= 0)
-            ]
+            data.loc[data["age"]<= 0, "age"] = np.nan
+
+            data.loc[data["age"]<= 120, "age"] = np.nan
+
+            data.loc[data["monthly_income"]<= 0, "monthly_income"] = np.nan
+
+            data.loc[data["avg_session_time"]<= 0, "avg_session_time"] = np.nan
+
+            data.loc[data["account_balance"]<= 0, "account_balance"] = np.nan
+
+            data.loc[data["last_payment_amount"]<= 0, "last_payment_amount"] = np.nan
+
+            data.loc[data["tenure_months"]<= 0, "tenure_months"] = np.nan
+
+            data.loc[data["support_tickets"]<= 0, "support_tickets"] = np.nan
+
+            data.loc[data["num_logins_last_month"]<= 0, "num_logins_last_month"] = np.nan
+
+            data.shape[0]
 
 
-            # Mostrar la nueva forma del DataFrame para verificar el resultado
-
-            data.shape
+            #Reemplaza inconsistencias con un nan
           metadata:
-            execution_start: 1776342828665
-            execution_millis: 0
-            execution_context_id: d71a48bd-b011-4f28-9478-c99688d3da06
-        - id: c79775b3566c48069acd1df125ddf70e
-          blockGroup: 58e97985e29543fca9e6d6497e9b55ca
-          sortingKey: "000085"
-          contentHash: cb46ca4b
-          executionFinishedAt: 2026-04-16T12:33:48.037Z
-          executionStartedAt: 2026-04-16T12:33:48.037Z
-          type: code
-          content: data.is_active.unique()
-          metadata:
-            execution_start: 1776342828037
-            execution_millis: 0
-            execution_context_id: d71a48bd-b011-4f28-9478-c99688d3da06
-        - id: 42b5195cbd8647d48159534d74a8f2d2
-          blockGroup: 59687405439a49419e94be9f6ad83539
-          sortingKey: "000086"
-          contentHash: ff0f0ed2
-          executionFinishedAt: 2026-04-16T12:33:48.839Z
-          executionStartedAt: 2026-04-16T12:33:48.821Z
+            execution_start: 1776397335104
+            execution_millis: 5
+            execution_context_id: dae28572-cade-4e9e-978f-5956d70dcdf7
+        - id: 75374ed8ebb144ad8ed31b01a721a580
+          blockGroup: 7629c5502a55415eac4454656c0221d3
+          sortingKey: "000084"
+          contentHash: fb503c2d
+          executionFinishedAt: 2026-04-17T03:42:27.457Z
+          executionStartedAt: 2026-04-17T03:42:27.372Z
           type: code
           content: >-
-            # Aplicar el preprocesador
+            # Aplicar el pipeline completo
 
             X = data.drop(columns=["churn", "customer_id"])
 
             y = data["churn"]
 
-            data_transformada = preprocesador.fit_transform(X)
+            data_transformada = pipeline_completo.fit_transform(X)
+
+            #Con esto separamos,limpiamos y transformamos los datos para que esten de calidad.
           metadata:
-            execution_start: 1776342828821
-            execution_millis: 18
-            execution_context_id: d71a48bd-b011-4f28-9478-c99688d3da06
+            execution_start: 1776397347372
+            execution_millis: 85
+            execution_context_id: dae28572-cade-4e9e-978f-5956d70dcdf7
         - id: 3e22bbe71d1845db84173f461159cfc0
           blockGroup: e38a1db7-4a33-4e4b-864e-7279a664c151
-          sortingKey: "000087"
+          sortingKey: "000085"
           type: markdown
           content: "# Guarda set de datos limpio y transformado"
           metadata:
             id: s8kSV8gI2gJ6
-        - id: 41144495e9654d56ab2e1fe7043248ff
-          blockGroup: da16154d-c3fc-4aa7-9130-567221e8452c
-          sortingKey: "000088"
-          contentHash: 280496a5
-          executionFinishedAt: 2026-04-16T12:33:53.419Z
-          executionStartedAt: 2026-04-16T12:33:48.889Z
+        - id: b735b5de3a554f32bd18ba091c55c201
+          blockGroup: 5ba42ad133da49e39f1ba52696853d48
+          sortingKey: "000086"
+          contentHash: e51ff5d
+          executionFinishedAt: 2026-04-17T03:42:23.844Z
+          executionStartedAt: 2026-04-17T03:42:23.844Z
           type: code
           content: >-
-            # Opción A: guardar el DataFrame limpio (antes del pipeline)
+            # Feature Engineering
 
-            # data.to_csv("dataset_churn_clean.csv", index=False)
+            data["login_rate"] = data["num_logins_last_month"] / (data["tenure_months"] + 1)
+
+            data["income_to_payment_ratio"] = data["last_payment_amount"] / (data["monthly_income"] + 1)
 
 
-            # Opción B: guardar la matriz transformada como DataFrame
+            #Creamos una nueva columna que muestra cuantas veces se logea un user 
+
+            #por mes desde que esta activo
+
+
+
+            print("Variables creadas:")
+
+            print(data[["login_rate", "income_to_payment_ratio"]].describe())
+          metadata:
+            execution_start: 1776397343844
+            execution_millis: 0
+            execution_context_id: dae28572-cade-4e9e-978f-5956d70dcdf7
+        - id: 08225fa135154be3824bd1f0aa8b1011
+          blockGroup: f89bf33eaf864882900225d3a90f9bc9
+          sortingKey: "000087"
+          contentHash: 30565dfa
+          executionFinishedAt: 2026-04-17T03:42:35.076Z
+          executionStartedAt: 2026-04-17T03:42:32.017Z
+          type: code
+          content: >-
+            # guardar la matriz transformada como DataFrame
 
             columnas_out = preprocesador.get_feature_names_out()
 
             data_final = pd.DataFrame(data_transformada, columns=columnas_out)
 
+            y_aligned = data.drop_duplicates(subset=X.columns).reset_index(drop=True)["churn"]
+
+
+            # Agregar la variable objetivo para que el dataset quede listo para modelado
+
+            data_final["churn"] = y_aligned.values
+
             data_final.to_csv("dataset_churn_transformado.csv", index=False)
           metadata:
-            execution_start: 1776342828889
-            execution_millis: 4530
-            execution_context_id: d71a48bd-b011-4f28-9478-c99688d3da06
-            id: tfx_0VvE3AG7
-        - id: a19366acef864a14ab8edee7cb21e9f1
-          blockGroup: c32a09770c40481c9668639c8fd4551e
-          sortingKey: "000089"
-          contentHash: 957547ae
-          executionFinishedAt: 2026-04-16T12:33:53.469Z
-          executionStartedAt: 2026-04-16T12:33:53.469Z
+            execution_start: 1776397352017
+            execution_millis: 3059
+            execution_context_id: dae28572-cade-4e9e-978f-5956d70dcdf7
+        - id: acc5fb91491b4e10bd1703aefcbc73fa
+          blockGroup: 935231fa2ae2488fbe12f786463416d7
+          sortingKey: "000088"
+          contentHash: 2eab866f
+          executionFinishedAt: 2026-04-17T03:48:56.024Z
+          executionStartedAt: 2026-04-17T03:48:56.024Z
           type: code
-          content: data.info()
+          content: pd.DataFrame(data_transformada, columns=columnas_out).info()
           metadata:
-            execution_start: 1776342833469
+            execution_start: 1776397736024
             execution_millis: 0
-            execution_context_id: d71a48bd-b011-4f28-9478-c99688d3da06
-        - id: a632d1ee949d494a86792fdf39c9707e
-          blockGroup: db963a3c0b9b401584f36c50a1ae7bba
-          sortingKey: "000090"
-          type: text-cell-p
-          content: Observamos que la mayoría redujo su cantidad a 16883, pero para las columnas "gender" y "payment_method" aún no
-            se cuadran los datos
-          metadata:
-            formattedRanges: []
+            execution_context_id: dae28572-cade-4e9e-978f-5956d70dcdf7
       executionMode: block
       id: 908bc9b2ec8a4dffbfd5c458a4d3807e
       isModule: false
@@ -1486,8 +1544,7 @@ project:
       workingDirectory: /
     - blocks: []
       executionMode: block
-      id: 272058eb43054f9ca74c476f6bafa987
+      id: c933dd25761a4fe8868e2cd81d972d9d
       isModule: false
-      name: Notebook 1
-      workingDirectory: Preparacion_Datos_IA_Grupo4
+      name: Notebook 2
 version: 1.0.0
