@@ -5,6 +5,8 @@ Repositorio para el código de las evaluaciones de Inteligencia Artificial sobre
 
 **2da Evaluación:** Modelos de Regresión
 
+**3ra Evaluación:** Modelos de Clasificación
+
 Integrantes: 
 - Cristina Morán
 - Alonso Valderrama
